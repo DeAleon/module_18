@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+  <header>
+    {% block header %}
+      <h1> {{ title }} </h1>
+    {% endblock %}
+  </header>
+
+  <nav>
+    {% block navigation %}
+      <p>
+        <a href="http://127.0.0.1:8000/platform">{{ home }}</a>
+      </p>
+      <p>
+        <a href="http://127.0.0.1:8000/platform/games">{{ games }}</a>
+      </p>
+      <p>
+        <a href="http://127.0.0.1:8000/platform/cart">{{ carts }}</a>
+      </p>
+    {% endblock %}
+  </nav>
+  <main>
+    {% block content %}
+      <p>Test</p>
+    {% endblock %}
+  </main>
+
+</body>
+</html>

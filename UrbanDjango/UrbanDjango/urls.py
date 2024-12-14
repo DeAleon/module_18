@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from task2.views import index_1, index_2
-from task3.views import index, games, cart
+from task4.views import index, games, cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
