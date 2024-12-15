@@ -6,7 +6,6 @@
 
 {% block navigation %}
     {{ block.super }}
-    <p></p>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +15,4 @@
             <li>{{ i }} <button>{{ sell }}</button></li>
         {% endfor %}
     </ul>
-    <a href="http://127.0.0.1:8000/platform">
-        <button>{{ back }}</button>
-    </a>
 {% endblock %}

@@ -19,24 +19,32 @@ def games(request):
     title = 'Игры'
     game = ['Sims 4', 'Mount and Blade: Warband', 'Red Dead Redemption 2']
     sell = 'Купить'
-    back = 'Вернуться обратно'
+    games = 'Магазин'
+    carts = 'Корзина'
+    home = 'Главная страница'
 
     context1={
         'title': title,
         'game': game,
         'sell': sell,
-        'back': back,
+        'games': games,
+        'carts': carts,
+        'home': home,
     }
     return render(request, 'fourth_task/games.html', context1)
 
 def cart(request):
     title = 'Корзина'
     error = 'Извините, Ваша корзина пуста'
-    back = 'Вернуться обратно'
+    games = 'Магазин'
+    carts = 'Корзина'
+    home = 'Главная страница'
 
     context2={
         'title': title,
         'error': error,
-        'back': back,
+        'games': games,
+        'carts': carts,
+        'home': home,
     }
     return render(request, 'fourth_task/cart.html', context2)
