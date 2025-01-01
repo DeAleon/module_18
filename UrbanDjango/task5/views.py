@@ -24,6 +24,9 @@ def sign_up_by_html(request):
             elif int(age) < 18:
                 info['error']='Вы должны быть старше 18'
 
+            elif int(age) > 120:
+                info['error']='Введите возраст до 120 лет'
+
             else:
                 return HttpResponse(f'Приветствуем, {name}!')
 
@@ -45,6 +48,9 @@ def sign_up_by_django(request):
 
         elif int(age) < 18:
             info['error']='Вы должны быть старше 18'
+
+        elif int(age) > 120:
+            info['error'] = 'Введите возраст до 120 лет'
 
         else:
             return HttpResponse(f'Приветствуем, {name}!')
